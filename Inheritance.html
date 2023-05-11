@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // class employee {
+
+        //     constructor(name) {
+
+        //         console.log("Constructor : Employee " + name);
+        //     }
+        // }
+
+        // class manager extends employee {
+        //     constructor() {
+
+        //         super(name);
+        //         console.log("Constructor : Manager" + name);
+        //     }
+
+        // }
+
+        // let a = new employee("Zubi SilverStone");
+
+
+        // Prototype Method
+
+        class employee {
+
+            constructor(name, age, salary) {
+                this.empname = name;
+                this.empage = age;
+                this.empsalary = salary;
+                console.log("Constructor : Employee ");
+            }
+
+            info() {
+                document.write(`<h3>Employee Class</h3>
+                Name : ${this.empname} <br>
+                Age : ${this.empage} <br>
+                Salary : ${this.empsalary} <br>`)
+            }
+        }
+
+        class manager extends employee {
+
+            info() {
+                let ta = 3000;
+                let pa = 1000;
+                let totalsalary = this.empsalary + ta + pa;
+
+                document.write(`<h3>Manager Class</h3>
+                Name : ${this.empname} <br>
+                Age : ${this.empage} <br>
+                Salary : ${this.totalsalary}`)
+            }
+        }
+
+        class test extends manager{
+
+
+
+        }
+
+        let a = new test("Zubi SilverStone",30,25000);
+        // let b = new employee("Underwood", 25, 20000);
+
+        a.info();
+        // b.info();
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
